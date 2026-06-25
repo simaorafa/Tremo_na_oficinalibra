@@ -1,15 +1,24 @@
-import React from 'react';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-export default function SignPanel() {
+function SignPanel() {
   return (
-    <div className="sign-panel">
-      <span>Alfabeto em sinais</span>
-      <div className="sign-image-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <div>
+      <h1>Alfabeto em sinais</h1>
+
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200">
           <rect width="100" height="100" fill="lightgray" />
         </svg>
       </div>
-      <p className="sign-helper">...</p>
+
+      <p>Teste</p>
     </div>
   );
 }
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <SignPanel />
+  </React.StrictMode>
+);
